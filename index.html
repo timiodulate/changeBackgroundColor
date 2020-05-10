@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click Me!</button>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: blue;
+        min-width: 500px;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color .5s ease-in-out;
+    }
+
+    #btn {
+        padding: 5px 10px;
+        /* margin: 0 auto; */
+        color: black;
+        background: transparent;
+        border: 1px solid;
+    }
+    #btn:hover {
+        color: white;
+    }
+    
+    .new {
+        background-color: red;
+    }
+</style>
+
+<script>
+    const body = document.querySelector('body');
+    const btn = document.getElementById('btn');
+
+    function changeBackground() {
+        body.classList.toggle('new');
+    };
+
+    btn.addEventListener('click', changeBackground);
+</script>
+</html>
